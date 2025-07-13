@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aryaman G</title>
+  <link rel="shortcut icon" href="./assets/images/my-avatar.png" type="image/x-icon">
+  <link rel="stylesheet" href="./assets/css/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+    .navbar-item.dropdown {
+      position: relative;
+    }
+
+    .navbar-item .dropdown-content {
+      display: none;
+      position: absolute;
+      background: linear-gradient(180deg, #333, #444);
+      color: #fff;
+      min-width: 160px;
+      box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+      z-index: 1;
+    }
+
+    .navbar-item .dropdown-content a {
+      color: #fff;
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    .navbar-item .dropdown-content a:hover {
+      background-color: #ffdd57;
+      color: #000;
+    }
+
+    .navbar-item.dropdown:hover .dropdown-content {
+      display: block;
+    }
+
+    .navbar-link {
+      color: #c0c0c0;
+    }
+
+    .navbar-link:hover,
+    .navbar-link:focus {
+      color: #ffdd57;
+    }
+
+    .navbar-link.active {
+      color: #ffdd57;
+    }
+
+    .navbar-item.dropdown:hover>.navbar-link {
+      color: #ffdd57;
+    }
+
+    .navbar-item.dropdown:focus>.navbar-link {
+      color: #ffdd57;
+    }
+
+    .navbar-item.dropdown:not(:hover):not(:focus)>.navbar-link {
+      color: #c0c0c0;
+    }
+  </style>
+</head>
+
+<body>
+
+  <main>
+
+    <aside class="sidebar">
+
+      <div class="sidebar-info">
+        <figure class="avatar-box">
+          <img src="./assets/images/my-avatar.png" alt="Aryaman G" width="80">
+        </figure>
+
+        <div class="info-content">
+          <h1 class="name">Aryaman G</h1>
+          <p class="title"> UG Student</p>
+        </div>
+
+        <button class="info_more-btn">
+          <span>Show Contacts</span>
+          <ion-icon name="chevron-down"></ion-icon>
+        </button>
+      </div>
+
+      <div class="sidebar-info_more">
+        <div class="separator"></div>
+
+        <ul class="contacts-list">
+
+          <li class="contact-item">
+            <div class="icon-box"><ion-icon name="mail-outline"></ion-icon></div>
+            <div class="contact-info">
+              <p class="contact-title">Email</p>
+              <a href="mailto:arya-gaj@proton.me" class="contact-link">arya-gaj@proton.me</a>
+            </div>
+          </li>
+
+          <li class="contact-item">
+            <div class="icon-box"><ion-icon name="phone-portrait-outline"></ion-icon></div>
+            <div class="contact-info">
+              <p class="contact-title">Phone</p>
+              <a href="tel:+19253644341" class="contact-link">+91 733-753-7670</a>
+            </div>
+          </li>
+
+          <li class="contact-item">
+            <div class="icon-box"><ion-icon name="location-outline"></ion-icon></div>
+            <div class="contact-info">
+              <p class="contact-title">Location</p>
+              <address>Hyderabad, India</address>
+            </div>
+          </li>
+
+        </ul>
+
+        <div class="separator"></div>
+
+        <ul class="social-list">
+          <li class="social-item"><a href="#" class="social-link"><ion-icon name="logo-facebook"></ion-icon></a></li>
+          <li class="social-item"><a href="#" class="social-link"><ion-icon name="logo-twitter"></ion-icon></a></li>
+          <li class="social-item"><a href="#" class="social-link"><ion-icon name="logo-instagram"></ion-icon></a></li>
+        </ul>
+
+      </div>
+
+    </aside>
+
+    <div class="main-content">
+
+      <nav class="navbar">
+        <ul class="navbar-list">
+          <li class="navbar-item">
+            <a href="#" class="navbar-link active" id="about-link" onclick="showPage('about')">About</a>
+          </li>
+          <li class="navbar-item">
+            <a href="https://docs.google.com/document/d/1lDexqeJFeLoX0bnzexVo3iJmqiZc_pCp/edit?usp=sharing&ouid=109558952494515266103&rtpof=true&sd=true" class="navbar-link">Résumé</a>
+          </li>
+          <li class="navbar-item">
+            <a href="https://github.com/arya-gaj/" class="navbar-link">GitHub</a>
+          </li>
+          <li class="navbar-item">
+            <a href="https://www.linkedin.com/in/arya-gaj/" class="navbar-link">LinkedIn</a>
+          </li>
+          <li class="navbar-item">
+            <a href="https://orcid.org/0009-0009-7141-8707/" class="navbar-link">ORCiD</a>
+          </li>
+          <li class="navbar-item">
+            <a href="#" class="navbar-link" id="contact-link" onclick="showPage('contact')">Contact</a>
+          </li>
+        </ul>
+      </nav>
+
+      <article class="about active" data-page="about">
+
+        <header>
+          <h2 class="h2 article-title">About me</h2>
+        </header>
+
+        <section class="about-text">
+          <p>I am deeply focused on leveraging deep learning to support cognitive and emotional wellness — designing systems that understand, adapt to, and respond to the human mind with care and intelligence.</p>
+          <p>My current work explores how machine learning can interpret subtle patterns in speech, behavior, and visual cues to detect mental states, enhance emotional insight, and enable early intervention.</p>
+          <p>I believe that artificial intelligence, when developed ethically and empathetically, can be a powerful ally in mental health. From emotion-aware interfaces to neural pattern analysis and adaptive feedback systems, I am also driven by the potential of emerging technologies to build more mindful, inclusive, and emotionally intelligent digital experiences for people across the world.</p>
+        </section>
+
+        <section class="service">
+
+          <h3 class="h3 service-title">What I'm doing</h3>
+
+          <ul class="service-list">
+
+            <li class="service-item">
+              <div class="service-icon-box">
+                <img src="./assets/images/icon-design.svg" alt="design icon" width="40">
+              </div>
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">Emotion-Centered UI Design</h4>
+                <p class="service-item-text">Designing interfaces that intuitively reflect and respond to users’ emotional and cognitive states — blending aesthetics with affective computing.</p>
+              </div>
+            </li>
+
+            <li class="service-item">
+              <div class="service-icon-box">
+                <img src="./assets/images/icon-dev.svg" alt="Web development icon" width="40">
+              </div>
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">AI-Driven System Development</h4>
+                <p class="service-item-text">Building intelligent platforms that leverage deep learning to interpret behavioral patterns and enable real-time emotional insights.</p>
+              </div>
+            </li>
+
+            <li class="service-item">
+              <div class="service-icon-box">
+                <img src="./assets/images/icon-app.svg" alt="mobile app icon" width="40">
+              </div>
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">Wellness-Focused Mobile Tools</h4>
+                <p class="service-item-text">Developing mobile applications that integrate speech and visual analysis for early detection and mental well-being support.</p>
+              </div>
+            </li>
+
+            <li class="service-item">
+              <div class="service-icon-box">
+                <img src="./assets/images/icon-photo.svg" alt="camera icon" width="40">
+              </div>
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">Visual Signal Decoding</h4>
+                <p class="service-item-text">Using computer vision to extract emotional and cognitive cues from facial expressions, posture, and other visual signals — powering emotionally intelligent systems.</p>
+              </div>
+            </li>
+
+          </ul>
+
+        </section>
+
+      </article>
+
+      <article class="contact" data-page="contact">
+
+        <header>
+          <h2 class="h2 article-title">Contact</h2>
+        </header>
+
+        <section class="mapbox">
+          <figure>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d199666.5651251294!2d-121.58334177520186!3d38.56165006739519!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x809ac672b28397f9%3A0x921f6aaa74197fdb!2sSacramento%2C%20CA%2C%20USA!5e0!3m2!1sen!2sbd!4v1647608789441!5m2!1sen!2sbd" width="400" height="300" loading="lazy"></iframe>
+          </figure>
+        </section>
+
+        <section class="contact-form">
+          <h3 class="h3 form-title">Contact Form</h3>
+          <form action="#" class="form">
+            <div class="input-wrapper">
+              <input type="text" name="fullname" class="form-input" placeholder="Full name" required>
+              <input type="email" name="email" class="form-input" placeholder="Email address" required>
+            </div>
+            <textarea name="message" class="form-input" placeholder="Your Message" required></textarea>
+            <button class="form-btn" type="submit">
+              <ion-icon name="paper-plane"></ion-icon>
+              <span>Send Message</span>
+            </button>
+          </form>
+        </section>
+
+      </article>
+
+    </div>
+
+  </main>
+
+  <script>
+    function showPage(page) {
+      document.getElementById('about-link').classList.remove('active');
+      document.getElementById('contact-link').classList.remove('active');
+
+      document.querySelector('.about').classList.remove('active');
+      document.querySelector('.contact').classList.remove('active');
+
+      if (page === 'about') {
+        document.getElementById('about-link').classList.add('active');
+        document.querySelector('.about').classList.add('active');
+      } else if (page === 'contact') {
+        document.getElementById('contact-link').classList.add('active');
+        document.querySelector('.contact').classList.add('active');
+      }
+    }
+  </script>
+
+  <script src="./assets/js/script.js"></script>
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+</body>
+
+</html>
